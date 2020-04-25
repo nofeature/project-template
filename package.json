@@ -19,9 +19,8 @@
     "stylelint-config-htmlacademy": "0.1.4"
   },
   "scripts": {
-    "eslint": "eslint source/js/*.js",
-    "stylelint": "stylelint \"source/scss/**/*.scss\" --syntax scss",
-    "test": "npm run stylelint && npm run eslint",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run stylelint",
     "build": "gulp build",
     "start": "gulp start"
   },

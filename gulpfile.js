@@ -1,14 +1,14 @@
 'use strict';
 
 var gulp = require('gulp');
+var del = require('del');
 var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var csso = require('gulp-csso');
+var less = require('gulp-less');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var server = require('browser-sync');
-var del = require('del');
 
 gulp.task('clear', function () {
   return del('build');
@@ -26,9 +26,9 @@ gulp.task('copy', function () {
 });
 
 gulp.task('css', function () {
-  return gulp.src('source/scss/index.scss')
+  return gulp.src('source/less/index.less')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(less())
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -44,12 +44,6 @@ gulp.task('html', function () {
     .pipe(server.stream());
 });
 
-gulp.task('js', function () {
-  return gulp.src('source/js/*.js')
-    .pipe(gulp.dest('build/js'))
-    .pipe(server.stream());
-});
-
 gulp.task('server', function () {
   server.init({
     server: {
@@ -61,10 +55,9 @@ gulp.task('server', function () {
     }
   });
 
-  gulp.watch('source/sass/**/*.sass', gulp.series('css'));
+  gulp.watch('source/less/**/*.less', gulp.series('css'));
   gulp.watch('source/*.html', gulp.series('html'));
-  gulp.watch('source/js/**/*.js', gulp.series('js'));
 });
 
-gulp.task('build', gulp.series('clear', 'copy', 'css', 'html', 'js'));
+gulp.task('build', gulp.series('clear', 'copy', 'css', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
