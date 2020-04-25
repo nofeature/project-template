@@ -6,19 +6,17 @@
   "repository": "git@github.com:in02emt5ev/project-template.git",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
-    "del": "^3.0.0",
-    "eslint": "4.19.x",
-    "eslint-config-htmlacademy": "0.5.2",
-    "gulp": "^4.0.2",
-    "gulp-csso": "3.0.x",
-    "gulp-plumber": "^1.2.x",
-    "gulp-postcss": "^8.0.x",
-    "gulp-rename": "^1.4.x",
-    "gulp-sass": "^4.0.x",
-    "stylelint": "^9.7.x",
-    "stylelint-config-htmlacademy": "^0.1.4"
+    "autoprefixer": "9.7.6",
+    "browser-sync": "2.26.7",
+    "del": "5.1.0",
+    "gulp": "4.0.2",
+    "gulp-csso": "4.0.1",
+    "gulp-less": "4.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "8.0.0",
+    "gulp-rename": "2.0.0",
+    "stylelint": "13.3.3",
+    "stylelint-config-htmlacademy": "0.1.4"
   },
   "scripts": {
     "eslint": "eslint source/js/*.js",
@@ -31,5 +29,8 @@
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
-  ]
+  ],
+  "engines": {
+    "node": "12.16.2"
+  }
 }
