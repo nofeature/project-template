@@ -6,6 +6,7 @@
   "repository": "git@github.com:in02emt5ev/project-template.git",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "9.7.6",
     "gulp": "4.0.2",
     "gulp-csso": "4.0.1",
     "gulp-less": "4.0.1",
