@@ -6,7 +6,8 @@
   "repository": "git@github.com:in02emt5ev/project-template.git",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "4.0.2"
+    "gulp": "4.0.2",
+    "gulp-csso": "4.0.1"
   },
   "scripts": {
     "eslint": "eslint source/js/*.js",
