@@ -31,5 +31,8 @@
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
-  ]
+  ],
+  "engines": {
+    "node": "12.16.2"
+  }
 }
